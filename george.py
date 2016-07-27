@@ -6,7 +6,7 @@ def hello():
     return "Hello World!"
     
     
-@app.route("/hello", methods = ['POST'])
+@app.route("/hello", methods = ['GET', 'POST'])
 def hellogeorge():
 	if(request.method == 'POST'):
     	return request
