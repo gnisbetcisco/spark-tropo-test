@@ -6,9 +6,10 @@ def hello():
     return "Hello World!"
     
     
-@app.route("/hello")
+@app.route("/hello", methods = ['POST'])
 def hellogeorge():
-    return "Hello George!"
+	
+    return request
 
 if __name__ == "__main__":
     app.run()
