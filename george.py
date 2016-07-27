@@ -8,8 +8,10 @@ def hello():
     
 @app.route("/hello", methods = ['POST'])
 def hellogeorge():
-	
-    return request
+	if(request.method == 'POST'):
+    	return request
+    else:
+    	return "A derp"
 
 if __name__ == "__main__":
     app.run()
