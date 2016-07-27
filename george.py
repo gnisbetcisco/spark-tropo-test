@@ -6,12 +6,12 @@ def hello():
     return "Hello World!"
     
     
-@app.route("/hello", methods = ['GET', 'POST'])
-def hellogeorge():
-	if(request.method == 'POST'):
-    	return request
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        return request.method
     else:
-    	return "A derp"
+        return request.method
 
 if __name__ == "__main__":
     app.run()
