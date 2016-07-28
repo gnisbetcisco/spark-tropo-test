@@ -1,4 +1,4 @@
-import pyCiscoSpark
+#import pyCiscoSpark
 from Flask import Flask
 from Flask import request
 app = Flask(__name__)
