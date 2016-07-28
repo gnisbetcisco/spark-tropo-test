@@ -1,6 +1,6 @@
 import pyCiscoSpark
-from flask import Flask
-from flask import request
+from Flask import Flask
+from Flask import request
 app = Flask(__name__)
 
 @app.route("/")
