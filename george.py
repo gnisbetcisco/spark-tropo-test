@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 import pyCiscoSpark
+
 app = Flask(__name__)
 
 @app.route("/", methods = ['POST', 'GET'])
@@ -10,7 +11,11 @@ def hello():
 	else:
 		return "GET"
 
-
+@app.route("/init", methods = ['GET'])
+def init():
+	at = request.args.get('auth', '')
+	return "Bearer " + at
+	#pyCiscoSpark.post_createroom()
 
 @app.route("/webhook", methods = ['POST'])
 def webhook():
